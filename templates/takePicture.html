@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>A Gentle Reminder</title>
+	<meta name="author" content="Paulina Zybinska">
+	<script src="{{ url_for('static', filename='jquery-3.3.1.min.js') }}" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='agr.css') }}">
+	<script src="{{ url_for('static', filename='face-api.js') }}"></script>
+
+</head>
+
+
+<div class="video-container">
+	<div class="video-content">
+		<video autoplay id="video"></video>
+		<canvas id="canvas" ></canvas>
+		<canvas id="faceapi_canvas"></canvas>
+		<p id="countdown"></p>
+
+	</div>
+</div>
+
+<div class="buttons">
+	<button id="buttonCapture" >Capture</button>
+</div>
+
+
+</body>
+<script src="{{ url_for('static', filename='capture.js')}}" type="module" crossorigin="anonymous"></script>
+
+</html>
