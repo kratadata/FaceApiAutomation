@@ -11,11 +11,13 @@ from pynput.keyboard import Key, Controller
 
 app = Flask(__name__, static_folder='static', static_url_path='/static')
 
+# change the path to current directory
 CURRENT_DIR = r"C:\Users\kr4ta\Desktop\AGR\users"
 keyboard = Controller()
 
-# UNCOMMENT THIS FOR PRODUCTION
+# change the path to browser
 threading.Timer(0.1, lambda: webbrowser.get("C:\Program Files\Google\Chrome\Application\chrome.exe %s").open("http://localhost:5000", autoraise=True)).start()
+# open in full screen mode
 threading.Timer(1.25, lambda:keyboard.press(Key.f11)).start()
 
 
